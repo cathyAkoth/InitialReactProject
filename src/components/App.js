@@ -5,11 +5,27 @@ import AddContact from "./AddContact";
 import ContactList from "./ContactList";
 
 function App() {
+  // Rendering lists in React.
+  const contacts = [
+    {
+      id:"1",
+      name:"Cathy",
+      email:"cathy@gmail.com",
+
+    },
+    {
+      id:"2",
+      name:"Cecilia",
+      email:"cathy@gmail.com",
+
+    },
+  ];
   return(
     <div className="ui container">
       <Header/>
       <AddContact />
-      <ContactList/>
+      {/* passing props */}
+      <ContactList contacts={contacts} />
     </div>
   );
 }
