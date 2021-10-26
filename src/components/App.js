@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import './App.css';
 import Header from "./Header";
 import AddContact from "./AddContact";
 import ContactList from "./ContactList";
 
+// Functional component
 function App() {
   // Use state React Hook.
+  const[contacts, setContacts] = useState([]);
   
   return(
     <div className="ui container">
