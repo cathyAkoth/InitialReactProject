@@ -8,11 +8,13 @@ import ContactList from "./ContactList";
 function App() {
   // Use state React Hook.
   const[contacts, setContacts] = useState([]);
-  
+  const addContactHandler = (contact) => {
+    console.log(contact);
+  }
   return(
     <div className="ui container">
       <Header/>
-      <AddContact />
+      <AddContact addContactHandler={addContactHandler}/>
       {/* passing props */}
       <ContactList contacts={contacts} />
     </div>
